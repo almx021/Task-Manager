@@ -1,5 +1,7 @@
 package com.mendes.task_manager.model;
 
+import java.time.LocalDateTime;
+
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -18,7 +20,7 @@ import jakarta.persistence.Table;
 public class Task {
     public Task() {}
 
-    public Task(Long id, String title, String description, String createdAt, String lastUpdatedAt) {
+    public Task(Long id, String title, String description, LocalDateTime createdAt, LocalDateTime lastUpdatedAt) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -39,11 +41,11 @@ public class Task {
 
     @CreatedDate
     @Column(name="created_at", updatable=false, nullable=false)
-    String createdAt;
+    LocalDateTime createdAt;
 
     @LastModifiedDate
     @Column(name="updated_at", nullable=false)
-    String lastUpdatedAt;
+    LocalDateTime lastUpdatedAt;
 
     public Long getId() {
         return id;
@@ -69,19 +71,19 @@ public class Task {
         this.description = description;
     }
 
-    public String getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
-    public String getLastUpdatedAt() {
+    public LocalDateTime getLastUpdatedAt() {
         return lastUpdatedAt;
     }
 
-    public void setLastUpdatedAt(String lastUpdatedAt) {
+    public void setLastUpdatedAt(LocalDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
     }
 
