@@ -87,7 +87,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return String.format("Task %s: %s\n%s", id, title, description);
+        return String.format("Task %s: %s - %s", id, title, description);
     }
 
     
