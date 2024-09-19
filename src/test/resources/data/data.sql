@@ -1,0 +1,2 @@
+INSERT INTO tb_tasks (task_title, task_description, created_at, updated_at) VALUES ('Test title 1', 'Test description 1', '2024-01-01 00:01:00', '2024-01-02 00:01:00');
+INSERT INTO tb_tasks (task_title, task_description, created_at, updated_at) VALUES ('Test title 2', 'Test description 2', '2024-01-01 00:00:00', '2024-01-02 00:00:00');
